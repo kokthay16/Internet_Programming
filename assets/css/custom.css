@@ -1,0 +1,103 @@
+/* Styles for wrapping the search box */
+
+.main {
+    width: 50%;
+    margin: 50px auto;
+}
+
+
+/* Bootstrap 4 text input with search icon */
+
+.has-search .form-control {
+    padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+
+.box {
+    margin-top: 5px;
+    width: 100%;
+    height: 130px;
+    background-color: #ff9999;
+    border: 1px solid #b3b3b3;
+    color: white;
+}
+
+.orange {
+    background-color: #fb9a6a;
+}
+
+.purple {
+    background-color: #f471f4;
+}
+
+.categories {
+    background-color: white;
+    border: 0px white;
+    color: #000;
+    width: 15%;
+    height: 60px;
+    text-align: left;
+    float: left;
+}
+
+.StyleCategories {
+    background-color: white;
+    border: 0px white;
+    color: #000;
+    height: 60px;
+    width: 200px;
+    text-align: left;
+    float: left;
+}
+
+.ShopLogo {
+    width: 300px;
+    margin-left: 0;
+}
+
+.product {
+    width: 100%;
+    padding-top: 10px;
+    float: left;
+}
+
+.boxProduct {
+    width: 100%;
+    height: 520px;
+}
+
+.infoProduct {
+    border: 1px solid #D3D8DB;
+    width: 100%;
+    height: 85px;
+    float: left;
+    padding-left: 20px;
+}
+
+.discount {
+    position: absolute;
+    top: 0px;
+    right: 15px;
+}
+
+.ImgProduct {
+    position: relative;
+}
+
+.loadmore {
+    margin: 0;
+    position: absolute;
+    transform: translate(400%, 20%);
+    padding-bottom: 50px;
+}
