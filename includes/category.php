@@ -10,7 +10,7 @@
                     <form action="index.php" method="post">
 
                         <input type="hidden" name="category" value="'.$cate["id"].'" >
-                            <button type="submit" class="StyleCategories btn btn-outline-light">
+                            <button type="submit" class="StyleCategories">
                             
                                 <img style="width: 50px;" src="'.$cate["icon"].'">'.$cate["name"].'
                             

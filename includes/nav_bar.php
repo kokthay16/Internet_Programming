@@ -1,4 +1,4 @@
-<div class='container'>
+<div class="container">
     <nav class='navbar navbar-expand-lg navbar-light bg-light'>
         <ul class='navbar-nav mr-auto'>
             <li class='nav-item active'></li>
@@ -14,10 +14,7 @@
                 </svg>
 
                 <a class='nav-link disabled ' href='# '>Need Help</a>
-                <button type='submit ' class='btn btn-secondary '>Join</button>
+                <a href="signin.php"><button type='button' class='btn btn-secondary '>Join</button></a>
                 
             </form>
         </nav>
-
-
-    </div>

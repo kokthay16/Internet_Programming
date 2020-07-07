@@ -31,7 +31,7 @@
                             <img width="70px" src="assets/img/icons/disscount.png">
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row" style="padding-top: 10px;">
                         <div class="col-md-4">
                             <img width="100%" src="'.$i["resource_path"].'" alt="First slide">
                         </div>
@@ -43,25 +43,26 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    
+                <div class="col-md-6"  style="padding-top: 10%;">
+                    <div class="border border-primary rounded">
                         <div class="row" style="vertical-align: auto;">
-                            <div style="float: left;"><h3>
-                                '.$i["name"].'</h3>
+                            <div style="float: left; ">
+                                <h3 style="padding-left: 20px;">'.$i["name"].'</h3>
                                 </div>  
                         </div>
-                        <div class="row" style="position:absolute; bottom: 0px;">
+                        <div class="row" style="bottom: 0px;">
                             
-                            <div class="col-md-9" style="float: left;">
+                            <div class="col-md-9" style="float: left;padding-left: 20px;">
                                 <del style="color: red;">$'.$i["price"].'</del>
                                 <p style="color: green;">'.$discount.'</p>                            
                             </div>
-                            <div class="col-md-3" style="left: 100%;">
+                            <div class="col-md-3" style="left: 0%;">
                                 <button type="button" class="btn btn-outline-primary">
                                         <img src="assets/img/icons/cart.png" width="20px">Cart
                                 </button>
                             </div>
                         </div>
+                    </div>
                 </div>';
             ?>
     </div>

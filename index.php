@@ -39,27 +39,29 @@ if(isset($_GET['search'])){
         <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css' integrity='sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk' crossorigin='anonymous'>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        <link rel='stylesheet' href='assets/css/custom.css'>
+        
         <script src='assets/js/load-more-button.js'></script>
         <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
 
 
     </head>
     <body>
-        <?php
-            include ('includes/nav_bar.php');
-          
-            $features = run_query("select * FROM features ;"); 
-            $f = $features -> fetch_array(MYSQLI_NUM);
-
-            include ('includes/feature.php');
-            include 'includes/promotion.php';
-            
-        ?>
-        <div class="row">
+        
             <?php
-                include 'includes/category.php';
-                include 'includes/products.php';
+                include ('includes/nav_bar.php');
+            
+                $features = run_query("select * FROM features ;"); 
+                $f = $features -> fetch_array(MYSQLI_NUM);
+
+                include ('includes/feature.php');
+                include 'includes/promotion.php';
+                
             ?>
-        </div>
+            <div class="row" style="padding-left: 20px;">
+                <?php
+                    include 'includes/category.php';
+                    include 'includes/products.php';
+                ?>
+            </div>
+        
     </body>

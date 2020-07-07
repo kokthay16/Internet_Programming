@@ -1,4 +1,4 @@
-<div class='product col-md-9'>
+<div class='product col-md-9' style="width: 100%;">
     <?php
 
             $product = "select pro.*, ass.resource_path from products as pro join assets as ass on pro.id = ass.product_id where pro.category_id = $category";
@@ -6,12 +6,13 @@
             $items = run_query($product);                
         ?>
         <div class='row'>
-            <?php
+            <div class='row'>
+                <?php
             foreach($items as $i):
                 $discount = ((100-$i["discount"])*$i["price"])/100;  
             echo '
 
-            <div class="col-md-4" style="width=100%;">
+            <div class="col-md-4" style="width=100%; padding-left:25px;">
                 <div class="boxProduct">
                     <a class="text-decoration-none" href="product.php?id='.$i['id'].'"> 
                         <div class="ImgProduct">
@@ -43,5 +44,6 @@
             </div>';
             endforeach; 
             ?>
+            </div>
         </div>
 </div>
