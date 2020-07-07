@@ -110,10 +110,10 @@ if(isset($_POST["submit_signup"])){
         <p class="signup"><?php echo $new_confirm_password;?><?php echo $massage;?></p>
         <input type="password" name="confirm_password" value="<?php if(isset( $_POST["submit_signup"])){if($confirm_password==NULL){ $confirm_password = NULL;}else $confirm_password;}?>" class="form-control input-lg" placeholder="Confirm Password"> 
         <br>
-        <input class="btn btn-lg btn-primary btn-block signup-btn create" type="submit" name="submit_signup" value="Continue">
+        <input class="btn btn-lg btn-success btn-block signup-btn create" type="submit" name="submit_signup" value="Continue">
     </form>
     <br>
-    <p class="sign_text">Already have an account? <a href="http://localhost/Assignment2/signin.php" class="singin">Sing in<a></p>
+    <p class="sign_text">Already have an account? <a href="signin.php" class="singin">Sign in<a></p>
 </div>
 </body>
 </html>

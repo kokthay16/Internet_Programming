@@ -103,7 +103,7 @@ if ($conn->connect_error) {
         <input class="btn btn-lg btn-success btn-block signup-btn create" type="submit" name="continue" value="Login">
     </form>
     <br>
-    <p class="sign_text">Don't have any account? <a href="http://localhost/Assignment2/signup.php" class="singin">Sing up<a></p>
+    <p class="sign_text">Don't have any account? <a href="signup.php" class="singin">Sign up<a></p>
 
 </div>
 </body>
