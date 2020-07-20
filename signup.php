@@ -32,9 +32,13 @@ if(isset($_POST["submit_signup"])){
 
     if($name!=NULL){
       if($email!=NULL){
-        if($password!=NULL){
+        if($password!=NULL && strlen(trim($password))>=4){
           if($confirm_password!=NULL){
             if($confirm_password == $password){
+
+              session_start();
+              header('Location: ./index.php');
+              exit;
 
               $succ = "Sign up success";
               $sewsome_shop = "";
@@ -50,7 +54,7 @@ if(isset($_POST["submit_signup"])){
 
           }else $new_confirm_password = "*confirm password";
             
-      }else $new_password = "*input your password";
+      }else $new_password = "*input your password at least 4 charater";
         
     }else $new_email = "*input your email";
       
@@ -100,17 +104,17 @@ if(isset($_POST["submit_signup"])){
     <form action="" method="post"class="form">
         
             <div>
-                <input type="text" name="name" value="<?php if(isset( $_POST["submit_signup"])){if($name==NULL){ $name = NULL;}else $name;}?>" class="form-control input-lg" placeholder="Name"></div>
+                <input type="text" name="name" value="<?php if(isset( $_POST["submit_signup"])){if($name==NULL){ $name = NULL;}else echo $name;}?>" class="form-control input-lg" placeholder="Name"></div>
         
         <p class="signup"><?php echo $new_email;?></p>
-        <input type="email" name="email" value="<?php if(isset( $_POST["submit_signup"])){if($email==NULL){ $email = NULL;}else $email;}?>" class="form-control input-lg" placeholder="Your Email" require>
+        <input type="email" name="email" value="<?php if(isset( $_POST["submit_signup"])){if($email==NULL){ $email = NULL;}else echo $email;}?>" class="form-control input-lg" placeholder="Your Email" require>
         <p class="signup"><?php echo $new_password;?></p>
 
-<input type="password" name="password" value="<?php if(isset( $_POST["submit_signup"])){if($password==NULL){ $password = NULL;}else $password;}?>" class="form-control input-lg" placeholder="Password">
+<input type="password" name="password" value="<?php if(isset( $_POST["submit_signup"])){if($password==NULL){ $password = NULL;}else echo $password;}?>" class="form-control input-lg" placeholder="Password">
         <p class="signup"><?php echo $new_confirm_password;?><?php echo $massage;?></p>
         <input type="password" name="confirm_password" value="<?php if(isset( $_POST["submit_signup"])){if($confirm_password==NULL){ $confirm_password = NULL;}else $confirm_password;}?>" class="form-control input-lg" placeholder="Confirm Password"> 
         <br>
-        <input class="btn btn-lg btn-success btn-block signup-btn create" type="submit" name="submit_signup" value="Continue">
+        <input class="btn btn-lg btn-primary btn-block signup-btn create" type="submit" name="submit_signup" value="Continue">
     </form>
     <br>
     <p class="sign_text">Already have an account? <a href="signin.php" class="singin">Sign in<a></p>

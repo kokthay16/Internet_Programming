@@ -48,6 +48,10 @@ if ($conn->connect_error) {
         $new_name;
         $sewsome_shop = "";
         $succ = "Login success";
+        session_start();
+        $_SESSION["name"] = $new_name;
+        header('Location: ./index.php');
+        exit;
       }else $massage = "*Email or password is valid. Try again!!!";
     }else $massage = "*Email or password is valid. Try again!!!";
 
