@@ -1,3 +1,10 @@
+<?php 
+    $cart = "signin.php";
+    
+    if(isset($_SESSION["name"])){
+        $cart = "checkout.php";
+}
+?>
 <?php
         $products = "select p.*, a.resource_path from products p join assets a on p.id = a.product_id where p.id= ".$_GET["id"];
                     $result = run_query($products);             
@@ -57,9 +64,11 @@
                                 <p style="color: green;">'.$discount.'</p>                            
                             </div>
                             <div class="col-md-3" style="left: 0%;">
-                                <button type="button" class="btn btn-outline-primary">
+                                <a href="'.$cart.' ">
+                                    <button type="button" class="btn btn-outline-primary">
                                         <img src="assets/img/icons/cart.png" width="20px">Cart
                                 </button>
+                                </a>
                             </div>
                         </div>
                     </div>

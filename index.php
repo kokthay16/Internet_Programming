@@ -21,6 +21,9 @@ if(isset($_GET['search'])){
     $keyword = $_GET['search'];
     $product = "select * from products join assets on products.id = assets.product_id where products.category_id = '{$category}' AND name LIKE '%{$keyword}%';";
 }
+ 
+    $checkout = "signin.php" ;
+    
 
 ?>
 <!DOCTYPE html>
@@ -63,5 +66,5 @@ if(isset($_GET['search'])){
                     include 'includes/products.php';
                 ?>
             </div>
-        
+            <a href="<?php echo $checkout;?>"><div class="check_fix"><h5 class="iterm_fix"><b>3 iterms</b></h5><p class="fix">$30.50</p></div></a>
     </body>

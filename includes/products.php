@@ -1,3 +1,10 @@
+<?php 
+    $cart = "signin.php";
+
+    if(isset($_SESSION["name"])){
+        $cart = "checkout.php";
+}
+?>
 <div class='product col-md-9' style="width: 100%;">
     <?php
 
@@ -33,9 +40,11 @@
                                 <p style="color: green;">'.$discount.'</p>                            
                             </div>
                             <div style="float: left;">
-                                <button type="button" class="btn btn-outline-primary">
+                                <a href="'.$cart.'">
+                                    <button type="button" class="btn btn-outline-primary">
                                         <img src="assets/img/icons/cart.png" width="20px">Cart
-                                </button>
+                                    </button>
+                                </a>
                             </div>
                         </div>
                     </div>

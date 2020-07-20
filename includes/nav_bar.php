@@ -1,3 +1,13 @@
+<?php 
+    $nav_name = '<a href="signin.php"><button type="button" class="btn btn-secondary">Join</button></a>' ;
+    session_start();
+    if(isset($_SESSION["name"])){
+    $nav_name = $_SESSION["name"];
+    $checkout = "checkout.php";
+}
+?>
+
+
 <div class="container">
     <nav class='navbar navbar-expand-lg navbar-light bg-light'>
         <ul class='navbar-nav mr-auto'>
@@ -14,7 +24,7 @@
                 </svg>
 
                 <a class='nav-link disabled ' href='# '>Need Help</a>
-                <a href="signin.php"><button type='button' class='btn btn-secondary '>Join</button></a>
+                <?php echo $nav_name;?>
                 
             </form>
         </nav>
